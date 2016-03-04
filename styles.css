@@ -1,9 +1,31 @@
-/*stylesheet.css*/
-.random {
 
+.random {
   font-size: 20px;
    align: center;
    height: 50px;
    width: 50px;
    background-color:blue;
+   border: solid;
+}
+
+/*.number-one {
+  font-size: 20px;
+  align: center;
+  height: 50px;
+  width: 50px;
+  background-color:red;
+}*/
+/*.number-two {
+font-size: 20px;
+align: center;
+ height: 50px;
+ width: 50px;
+ background-color:green;
+ }*/
+
+ .highlight{
+            
+            background-color: green;
+            height: 50px;
+            width: 50px;
 }

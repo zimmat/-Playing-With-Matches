@@ -1,32 +1,41 @@
 
 
 function getRandomNumber(min, max) {
-return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-var el = document.querySelector("#random");
-function upDate(){
-el.innerHTML = getRandomNumber(1,9);
+var el = document.querySelectorAll(".random");
 
-}
-getRandomNumber(1,9);
-upDate();
-function getRandomNumber(min, max) {
-return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-var el = document.querySelector("#number-one");
-function upDate(){
-el.innerHTML = getRandomNumber(1,9);
+var upDate = function() {
+  for(i=0; i < el.length; i++){
 
+  el[i].innerHTML = getRandomNumber(1, 3);
 }
-getRandomNumber(1,9);
-upDate();
-function getRandomNumber(min, max) {
-return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-var el = document.querySelector("#number-two");
-function upDate(){
-el.innerHTML = getRandomNumber(1,9);
+};
 
-}
-getRandomNumber(1,9);
+
+
+
+var  matchingNumbers = function(){
+  var match = document.getElementById("message");
+  if(el[0].innerHTML === el[1].innerHTML){
+    el[0].classList.add("highlight");
+    el[1].classList.add("highlight");
+    match.innerHTML = el[0].innerHTML + " " + "are matching";
+
+  }
+
+  if(el[0].innerHTML === el[2].innerHTML){
+    el[0].classList.add("highlight");
+    el[2].classList.add("highlight");
+      match.innerHTML = el[0].innerHTML + " " + "are matching";
+  }
+
+  if(el[1].innerHTML === el[2].innerHTML){
+    el[1].classList.add("highlight");
+    el[2].classList.add("highlight");
+      match.innerHTML = el[0].innerHTML + " " + "are matching";
+  }
+};
+
 upDate();
+matchingNumbers();
